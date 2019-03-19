@@ -9,7 +9,7 @@ import java.util.List;
  * Created by 8e3Yn4uK on 13.03.2019
  */
 
-public class AfterThrowingDemoApp {
+public class AfterFinallyDemoApp {
     public static void main(String[] args) {
 
         // read the spring config java class
@@ -20,13 +20,13 @@ public class AfterThrowingDemoApp {
 
         List<Account> theAccounts = null;
         try {
-            boolean tripWire = true;
+            boolean tripWire = false;
             theAccounts = theAccountDAODao.findAccounts(tripWire);
         } catch (Exception e) {
             System.out.println("\n Main program ... caught exception: " + e);
         }
 
-        System.out.println("\n\nMain program: AfterThrowingDemoApp");
+        System.out.println("\n\nMain program: AfterFinallyDemoApp");
         System.out.println("--------------");
         System.out.println(theAccounts);
         System.out.println("\n");
